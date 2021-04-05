@@ -1,0 +1,154 @@
+<%- include('./templates/head.ejs') %>
+
+<div class="container mb-5">
+  <%- include('./templates/navtop.ejs') %>
+
+  <div class="announcement-flex" style="position: static; transform: none;">
+    <!-- Left Side Progress Bar -->
+    <div class="side-progress-bar d-none d-lg-block">
+      <img src="/img/tracking-3.svg" alt="tracking">
+    </div>
+
+    <div class="announcement-content">
+      <h5 class="mb-5">Escolha quais materiais você precisa</h5>
+
+      <h5 class="fw-normal">Lista de material escolar</h5>
+      <p class="announcement-subtitle">Escolha apenas o que você precisa. Lembre-se que existem mais estudantes precisando de material escolar</p>
+
+      <form action="" class="mt-5 d-none d-lg-block" id="form-desktop">
+        <p class="announcement-title mb-2">Papelaria</p>
+        
+        <div class="announcement-checkbox">
+          <input type="checkbox" class="form-check">
+          <label for="">Caderno universitário 200 folhas</label>
+        </div>    
+        
+        <div class="announcement-checkbox">
+          <input type="checkbox" class="form-check">
+          <label for="">Caderno universitário 90 folhas</label>
+        </div> 
+
+        <div class="announcement-checkbox">
+          <input type="checkbox" class="form-check">
+          <label for="">Lápis HB N°2</label>
+        </div> 
+
+        <div class="announcement-checkbox">
+          <input type="checkbox" class="form-check">
+          <label for="">Caneta esferográfica azul/preta</label>
+        </div> 
+
+        <div class="announcement-checkbox">
+          <input type="checkbox" class="form-check">
+          <label for="">Apontador com depósito</label>
+        </div> 
+
+        <div class="announcement-checkbox">
+          <input type="checkbox" class="form-check">
+          <label for="">Borracha branca</label>
+        </div> 
+
+        <div class="announcement-checkbox">
+          <input type="checkbox" class="form-check">
+          <label for="">Lápis de cor 12 cores</label>
+        </div> 
+
+        <div class="announcement-checkbox">
+          <input type="checkbox" class="form-check">
+          <label for="">Régua 30cm</label>
+        </div> 
+
+        <div class="announcement-checkbox">
+          <input type="checkbox" class="form-check">
+          <label for="">Agenda escolar</label>
+        </div> 
+
+        <div class="announcement-checkbox">
+          <input type="checkbox" class="form-check">
+          <label for="">Estojo</label>
+        </div> 
+
+        <div class="announcement-checkbox">
+          <input type="checkbox" class="form-check">
+          <label for="">Mochila infantil</label>
+        </div> 
+
+        <div class="announcement-checkbox">
+          <input type="checkbox" class="form-check">
+          <label for="">Mochila juvenil</label>
+        </div> 
+        
+
+        <p class="announcement-title mb-2">Livraria</p>
+
+        <div class="announcement-checkbox">
+          <input type="checkbox" class="form-check">
+          <label for="">Dicionário português</label>
+        </div> 
+
+        <div class="announcement-checkbox">
+          <input type="checkbox" class="form-check">
+          <label for="">Dicionário inglês</label>
+        </div> 
+
+        <div class="announcement-checkbox">
+          <input type="checkbox" class="form-check">
+          <label for="">Livro para vestibular - Matemática</label>
+        </div> 
+
+        <div class="announcement-checkbox">
+          <input type="checkbox" class="form-check">
+          <label for="">Livro para vestibular - Lingua Portuguesa</label>
+        </div> 
+
+        <div class="announcement-checkbox">
+          <input type="checkbox" class="form-check">
+          <label for="">Livro para vestibular - Química</label>
+        </div> 
+
+        <div class="announcement-checkbox">
+          <input type="checkbox" class="form-check">
+          <label for="">Livro para vestibular - Física</label>
+        </div> 
+
+        <div class="announcement-checkbox">
+          <input type="checkbox" class="form-check">
+          <label for="">Livro para vestibular - Biologia</label>
+        </div> 
+
+        <div class="announcement-checkbox">
+          <input type="checkbox" class="form-check">
+          <label for="">Livro para vestibular - Geografia</label>
+        </div>
+        
+        <div class="announcement-checkbox">
+          <input type="checkbox" class="form-check">
+          <label for="">Livro para vestibular - Inglês</label>
+        </div>
+
+        <p class="announcement-title mb-2">Informática</p>
+
+        <div class="announcement-checkbox">
+          <input type="checkbox" class="form-check">
+          <label for="">Notebook</label>
+        </div>
+      </form>
+
+      <form action="" class="mt-5 d-lg-none" id="form-mobile">
+        <p class="announcement-subtitle">Categorias</p>
+        <div class="form-group">
+          <input type="text" placeholder="Papelaria" class="form-control" disabled>
+          <input type="text" placeholder="Livraria" class="form-control" disabled>
+          <input type="text" placeholder="Informática" class="form-control" disabled>
+        </div>
+      </form>
+
+      <div class="card-d-links">
+        <a href="/anunciar/anuncio" class="btn btn-back d-none d-lg-block">< Voltar</a>
+        <a href="/anunciar/finalizacao" class="btn btn-continue">PUBLICAR</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include('./templates/body.ejs') %>

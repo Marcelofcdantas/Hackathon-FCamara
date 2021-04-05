@@ -1,0 +1,148 @@
+<header>
+  <div class="w-100">
+    <!-- Desktop -->
+    <div class="header">
+      <div class="bars-dropdown d-lg-none">
+        <i class="fas fa-bars"></i>
+
+        <div class="navbar-dropdown-list">
+          <a href="#">Início</a>
+          <a href="#">O que fazemos</a>
+          <a href="#">Como funciona</a>
+        </div>
+      </div>
+
+      <a href="/">
+        <img src="/img/Logo.svg" alt="logo">
+      </a>
+
+      <nav class="navbar-list d-none d-lg-block">
+        <ul>
+          <li>
+            <a href="/">Início</a>
+          </li>
+          <li>
+            <a href="#">O que fazemos</a>
+          </li>
+          <li>
+            <a href="#">Como funciona</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="navbar-user">
+
+        <a href="/pesquisar" class="navbar-donate-link d-none d-lg-block">
+          FAZER UMA DOAÇÃO
+        </a>
+
+        <div class="navbar-user-content d-flex">
+          <div class="d-none d-lg-block" id="user-info">
+            <h5>Olá, Maria Silva</h5>
+            <span>Minha conta</span>
+          </div>
+
+          <div class="navbar-dropdown-list">
+            <span class="navbar-dropdown-list-title">Usuário</span>
+
+            <a href="#">
+              <i class="far fa-user"></i>
+              Minha conta
+            </a>
+            <a href="#">
+              <i class="far fa-heart"></i>
+              Minhas doações
+            </a>
+            <a href="#">
+              <i class="far fa-edit"></i>
+              Meus anúncios
+            </a>
+
+            <span class="navbar-dropdown-list-title">Atividades</span>
+
+            <a href="/pesquisar" class="activity-link">
+              <i class="fas fa-donate"></i>
+              Fazer uma doação
+            </a>
+
+            <a href="/anunciar" class="activity-link">
+              <i class="fas fa-th"></i>
+              Fazer um anúncio
+            </a>
+
+            <a href="#" class="activity-link">
+              <i class="far fa-question-circle"></i>
+              Ajuda
+            </a>
+          </div>
+
+          <div class="navbar-user-dropdown d-none d-lg-block">
+            <i class="fas fa-caret-down" alt="dropdown_icon"></i>
+          </div>
+
+          <div class="navbar-user-dropdown-mobile d-lg-none">
+            <i class="far fa-user"></i>
+            <i class="fas fa-caret-down" alt="dropdown_icon" class="navbar-user-dropdown"></i>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  // Header dropdown
+  let dropdown = document.querySelector('.navbar-user-content .navbar-dropdown-list');
+  const userDropdown = document.querySelector('.navbar-user-content');
+  const barsDropdown = document.querySelector('.header .bars-dropdown');
+  const divUserInfo = document.querySelector('#user-info');
+  const divUserDropdown = document.querySelector('.navbar-user-dropdown');
+  const divUserDropdownMobile = document.querySelector('.navbar-user-dropdown-mobile');
+
+  function toggleDropdown(e) {    
+    if(!(this != e.target)) {
+
+      if(this == userDropdown) {
+        dropdown = document.querySelector('.navbar-user-content .navbar-dropdown-list');
+      }
+
+      if(this == barsDropdown) {
+        dropdown = document.querySelector('.header .navbar-dropdown-list');
+      }
+
+      if(dropdown.style.display == "block") {
+        dropdown.style.display = "none";
+      } else {
+        dropdown.style.display = "block";
+      }
+
+    }
+
+  }
+
+  userDropdown.addEventListener('click', toggleDropdown);
+  barsDropdown.addEventListener('click', toggleDropdown);
+  
+
+  // Fechar dropdown se usuário clicar fora do elemento
+  document.addEventListener('mouseup', function(e) {
+    if(dropdown.style.display == "block") {
+
+      const validacoes = [
+        e.target != dropdown,         // Se elemento clicado não for dropdown 
+        e.target != userDropdown,
+        e.target != barsDropdown,
+        e.target.parentNode != dropdown
+      ];
+
+      let checker = array => validacoes.every(Boolean);
+
+      // Se todas as validações forem true
+      if(checker(validacoes)) {
+        dropdown.style.display = "none";
+      }
+    }
+  });
+</script>

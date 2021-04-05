@@ -1,6 +1,6 @@
 # Doei!
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc iaculis hendrerit efficitur. Nam eget ex dignissim, eleifend ipsum in, convallis velit. Suspendisse consectetur accumsan elit, quis commodo quam consequat sit amet. In condimentum orci quis metus volutpat dignissim. In ullamcorper ut lorem sed placerat. Aliquam quis finibus mauris.
+Website desenvolvido para atender o desafio proposto pelo Hackathon da FCamara de doação de material escolar. 
 
 Tabela de conteúdos
 =================

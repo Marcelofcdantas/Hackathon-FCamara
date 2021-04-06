@@ -2,6 +2,8 @@
 
 Website desenvolvido para atender o desafio proposto pelo Hackathon da FCamara de doação de material escolar. 
 
+O Doei! é um site que conecta estudantes do ensino público que precisam de material escolar a doadores que apoiam causas educacionais com simplicidade e eficiência.
+
 Tabela de conteúdos
 =================
 <!--ts-->
